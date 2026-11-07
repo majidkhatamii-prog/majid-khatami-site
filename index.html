@@ -24,8 +24,8 @@ nav{display:flex;gap:20px;align-items:center;font-size:.9rem;font-weight:600}nav
 h1{font-size:clamp(2.3rem,5vw,4rem);line-height:1.35;margin:15px 0 8px;color:var(--green);font-weight:900}
 h1 span{color:var(--gold)}
 .lead{color:#53635d;max-width:650px;font-size:1.04rem;text-align:justify;text-align-last:right;line-height:2.15;margin:0;}
-.lead-blocks{display:grid;gap:13px;max-width:720px;margin-top:12px;}
-.lead-block{display:flex;align-items:flex-start;gap:11px;}
+.lead-blocks{display:grid;grid-template-columns:minmax(0,1fr);gap:13px;max-width:720px;margin-top:12px;}
+.lead-block{display:grid;grid-template-columns:27px minmax(0,1fr);align-items:start;column-gap:11px;width:100%;}
 .lead-mark{flex:0 0 27px;width:27px;height:27px;display:grid;place-items:center;margin-top:4px;border-radius:50%;background:#e8f0e9;border:1px solid #bfd2c2;color:var(--green2);font-size:1rem;font-weight:900;box-shadow:0 3px 9px #123c3512;}
 .lead-block .lead{flex:1;min-width:0;}
 #about .box p{ text-align:justify; text-align-last:right; text-justify:inter-word; line-height:2.1; margin:10px 0 16px; }
@@ -237,6 +237,7 @@ input, textarea, select { font-size: 16px; }
       <div class="lead-block"><span class="lead-mark" aria-hidden="true">✓</span><p class="lead">ارائه خدمات مشاوره در موضوعات حقوقی، ملکی، خانواده، قراردادها و کیفری.</p></div>
       <div class="lead-block"><span class="lead-mark" aria-hidden="true">✓</span><p class="lead">امکان هماهنگی برای مشاوره حضوری و گفت‌وگوی آنلاین.</p></div>
       <div class="lead-block"><span class="lead-mark" aria-hidden="true">✓</span><p class="lead">در هر موضوع، تلاش می‌شود مسئله با دقت بررسی و مسیرهای قانونی قابل پیگیری به زبان روشن توضیح داده شود. هدف، کمک به تصمیم‌گیری آگاهانه و پیگیری مسئولانه امور حقوقی شماست.</p></div>
+      <div class="lead-block"><span class="lead-mark" aria-hidden="true">✓</span><p class="lead">بسیاری از اختلافات حقوقی با آگاهی و اقدام به‌موقع قابل پیشگیری هستند. هدف ما این است که با ارائه راهنمایی‌های حقوقی مناسب، به شما کمک کنیم پیش از بروز مشکلات جدی، تصمیم‌های مطمئن‌تری بگیرید.</p></div>
     </div>
     <div class="actions"><a class="btn" href="#contact">ثبت درخواست مشاوره</a><a class="btn light" href="tel:09130321835">تماس: 09130321835</a><a class="btn gold" href="https://ble.ir/majidkhatamii" target="_blank" rel="noopener">گفت‌وگو در بله</a></div>
   </div>
