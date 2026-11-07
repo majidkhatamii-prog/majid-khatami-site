@@ -221,6 +221,40 @@ input, textarea, select { font-size: 16px; }
 @media(max-width:720px){.hero-intro{gap:14px;margin:14px 0 10px}.hero-portrait{width:108px;height:124px;flex-basis:108px;border-radius:14px;border-width:3px}.hero-intro h1{font-size:clamp(1.8rem,8vw,2.5rem)}}
 
 
+/* نظم‌دهی مراحل هماهنگی و برجسته‌کردن شماره‌ها */
+#about .steps { align-items: stretch; }
+#about .step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  min-width: 0;
+  text-align: right;
+  line-height: 2;
+}
+#about .step-number {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #e9e2cf;
+  color: var(--green);
+  font-size: 1.55rem;
+  font-weight: 900;
+  line-height: 1;
+}
+#about .step-content { width: 100%; min-width: 0; text-align: right; }
+#about .step b { display: block; margin: 0 0 5px; text-align: right; line-height: 1.9; }
+#about .step small { display: block; color: var(--muted); line-height: 1.95; text-align: right; text-align-last: right; overflow-wrap: anywhere; }
+@media (max-width: 720px) {
+  #about .steps { grid-template-columns: minmax(0, 1fr); gap: 10px; }
+  #about .step { flex-direction: row; align-items: flex-start; gap: 13px; padding: 14px; }
+  #about .step-number { flex: 0 0 44px; width: 44px; height: 44px; font-size: 1.6rem; }
+  #about .step-content { flex: 1; }
+}
+
 /* تراز منظم و راست‌چین مراحل هماهنگی، بدون تغییر در ظاهر کلی سایت */
 #about .step { text-align: right; line-height: 2; }
 #about .step b { margin-top: 3px; }
@@ -352,7 +386,7 @@ input, textarea, select { font-size: 16px; }
     <p>پس از ثبت درخواست اولیه، برای شناخت بهتر موضوع و تعیین زمان مشاوره با شما هماهنگ می‌شویم. بررسی اولیه به‌تنهایی به معنای پذیرش وکالت یا تضمین نتیجه پرونده نیست؛ تصمیم درباره قبول موضوع و شرایط همکاری پس از بررسی و توافق انجام خواهد شد.</p>
     <p>برخورد محترمانه، توضیح روشن مراحل کار و همراهی با شما برای انتخاب مسیر مناسب، از اصول مهم ارتباط با مراجعان است.</p>
   </div>
-  <div class="box"><h3>مراحل هماهنگی</h3><div class="steps"><div class="step">۱ <b>ثبت درخواست مشاوره</b><small>ثبت اطلاعات تماس و بیان موضوع کلی درخواست از طریق سایت.</small></div><div class="step">۲ <b>بررسی و هماهنگی</b><small>بررسی اولیه درخواست و هماهنگی با شما برای تعیین زمان و شیوه مشاوره.</small></div><div class="step">۳ <b>برگزاری جلسه مشاوره</b><small>بررسی موضوع و مدارک مرتبط و ارائه راهکارهای قانونی متناسب با شرایط پرونده.</small></div></div></div>
+  <div class="box"><h3>مراحل هماهنگی</h3><div class="steps"><div class="step"><span class="step-number">۱</span><div class="step-content"><b>ثبت درخواست مشاوره</b><small>ثبت اطلاعات تماس و بیان موضوع کلی درخواست از طریق سایت.</small></div></div><div class="step"><span class="step-number">۲</span><div class="step-content"><b>بررسی و هماهنگی</b><small>بررسی اولیه درخواست و هماهنگی با شما برای تعیین زمان و شیوه مشاوره.</small></div></div><div class="step"><span class="step-number">۳</span><div class="step-content"><b>برگزاری جلسه مشاوره</b><small>بررسی موضوع و مدارک مرتبط و ارائه راهکارهای قانونی متناسب با شرایط پرونده.</small></div></div></div></div>
 </div></section>
 <section class="faq" id="faq"><div class="container">
   <div class="section-head"><h2>سؤالات متداول</h2><p>پاسخ‌های اولیه برای آشنایی با روند هماهنگی.</p></div>
