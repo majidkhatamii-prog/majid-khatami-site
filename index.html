@@ -220,6 +220,12 @@ input, textarea, select { font-size: 16px; }
 .hero-intro{display:flex;align-items:center;gap:22px;margin:15px 0 8px}.hero-portrait{width:138px;height:156px;flex:0 0 138px;object-fit:cover;object-position:center 30%;border-radius:18px;border:4px solid #fff;outline:1px solid #d8c28d;box-shadow:0 12px 30px #123c3522;background:#fff;filter:contrast(1.035) saturate(1.025);image-rendering:auto}.hero-intro h1{margin:0;}
 @media(max-width:720px){.hero-intro{gap:14px;margin:14px 0 10px}.hero-portrait{width:108px;height:124px;flex-basis:108px;border-radius:14px;border-width:3px}.hero-intro h1{font-size:clamp(1.8rem,8vw,2.5rem)}}
 
+
+/* تراز منظم و راست‌چین مراحل هماهنگی، بدون تغییر در ظاهر کلی سایت */
+#about .step { text-align: right; line-height: 2; }
+#about .step b { margin-top: 3px; }
+#about .step small { display: block; color: var(--muted); line-height: 1.95; }
+
 /* فقط تراز متن توضیحات حوزه‌های فعالیت؛ حفظ چیدمان و ظاهر قبلی */
 #services .card p {
   line-height: 2;
@@ -242,10 +248,10 @@ input, textarea, select { font-size: 16px; }
     <span class="kicker">همراه شما در مسیر پیگیری حقوقی</span>
     <div class="hero-intro"><img class="hero-portrait" src="https://s3.bonyadvokala.com/bv-avatars/avatars/hsmL4lX6kQfjNZGqBIjEW2LnqDWpaCeYi0oBB3lh.jpg" alt="تصویر مجید خاتمی" loading="eager"><div><h1>مجید <span>خاتمی</span></h1></div></div>
     <div class="lead-blocks">
-      <div class="lead-block"><span class="lead-mark" aria-hidden="true">✓</span><p class="lead">ارائه خدمات مشاوره در موضوعات حقوقی، ملکی، خانواده، قراردادها و کیفری.</p></div>
-      <div class="lead-block"><span class="lead-mark" aria-hidden="true">✓</span><p class="lead">امکان هماهنگی برای مشاوره حضوری و گفت‌وگوی آنلاین.</p></div>
-      <div class="lead-block"><span class="lead-mark" aria-hidden="true">✓</span><p class="lead">در هر موضوع، تلاش می‌شود مسئله با دقت بررسی و مسیرهای قانونی قابل پیگیری به زبان روشن توضیح داده شود. هدف، کمک به تصمیم‌گیری آگاهانه و پیگیری مسئولانه امور حقوقی شماست.</p></div>
-      <div class="lead-block"><span class="lead-mark" aria-hidden="true">✓</span><p class="lead">بسیاری از اختلافات حقوقی با آگاهی و اقدام به‌موقع قابل پیشگیری هستند. هدف ما این است که با ارائه راهنمایی‌های حقوقی مناسب، به شما کمک کنیم پیش از بروز مشکلات جدی، تصمیم‌های مطمئن‌تری بگیرید.</p></div>
+      <div class="lead-block"><span class="lead-mark" aria-hidden="true">✓</span><p class="lead">ارائه خدمات مشاوره حقوقی در زمینه دعاوی ملکی، امور خانواده، قراردادها و مسائل حقوقی و کیفری، متناسب با موضوع و شرایط هر درخواست.</p></div>
+      <div class="lead-block"><span class="lead-mark" aria-hidden="true">✓</span><p class="lead">فراهم‌بودن امکان دریافت مشاوره به‌صورت حضوری، تلفنی و آنلاین، با هدف تسهیل دسترسی شما به خدمات و راهنمایی‌های حقوقی.</p></div>
+      <div class="lead-block"><span class="lead-mark" aria-hidden="true">✓</span><p class="lead">بررسی دقیق هر موضوع و تشریح مسیرهای قانونی قابل پیگیری به زبانی روشن و قابل‌فهم، با هدف کمک به تصمیم‌گیری آگاهانه و انتخاب راهکار مناسب برای حفظ حقوق شما.</p></div>
+      <div class="lead-block"><span class="lead-mark" aria-hidden="true">✓</span><p class="lead">بسیاری از اختلافات حقوقی با آگاهی و اقدام به‌موقع قابل پیشگیری هستند. با دریافت راهنمایی حقوقی مناسب، می‌توانید پیش از بروز مشکلات جدی، تصمیم‌های سنجیده‌تر و مطمئن‌تری بگیرید.</p></div>
     </div>
     <div class="actions"><a class="btn" href="#contact">ثبت درخواست مشاوره</a><a class="btn light" href="tel:09130321835">تماس: 09130321835</a><a class="btn gold" href="https://ble.ir/majidkhatamii" target="_blank" rel="noopener">گفت‌وگو در بله</a></div>
   </div>
@@ -275,7 +281,7 @@ input, textarea, select { font-size: 16px; }
     <p>پس از ثبت درخواست اولیه، برای شناخت بهتر موضوع و تعیین زمان مشاوره با شما هماهنگ می‌شویم. بررسی اولیه به‌تنهایی به معنای پذیرش وکالت یا تضمین نتیجه پرونده نیست؛ تصمیم درباره قبول موضوع و شرایط همکاری پس از بررسی و توافق انجام خواهد شد.</p>
     <p>برخورد محترمانه، توضیح روشن مراحل کار و همراهی با شما برای انتخاب مسیر مناسب، از اصول مهم ارتباط با مراجعان است.</p>
   </div>
-  <div class="box"><h3>مراحل هماهنگی</h3><div class="steps"><div class="step">۱ <b>ثبت درخواست</b><small>ارسال اطلاعات تماس</small></div><div class="step">۲ <b>هماهنگی</b><small>تعیین زمان مشاوره</small></div><div class="step">۳ <b>بررسی موضوع</b><small>پس از توافق درباره شرایط</small></div></div></div>
+  <div class="box"><h3>مراحل هماهنگی</h3><div class="steps"><div class="step">۱ <b>ثبت درخواست مشاوره</b><small>ثبت اطلاعات تماس و بیان موضوع کلی درخواست از طریق سایت.</small></div><div class="step">۲ <b>بررسی و هماهنگی</b><small>بررسی اولیه درخواست و هماهنگی با شما برای تعیین زمان و شیوه مشاوره.</small></div><div class="step">۳ <b>برگزاری جلسه مشاوره</b><small>بررسی موضوع و مدارک مرتبط و ارائه راهکارهای قانونی متناسب با شرایط پرونده.</small></div></div></div>
 </div></section>
 <section class="faq" id="faq"><div class="container">
   <div class="section-head"><h2>سؤالات متداول</h2><p>پاسخ‌های اولیه برای آشنایی با روند هماهنگی.</p></div>
