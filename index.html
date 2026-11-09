@@ -443,7 +443,7 @@ document.getElementById('requestForm').addEventListener('submit', async function
   const phone = document.getElementById('phone').value.trim().replace(/[\\s-]/g, '');
   if (!selected) { alert('لطفاً نوع مشاوره را انتخاب کنید.'); return; }
   if (!name || !subject || !phone) { alert('لطفاً همه اطلاعات خواسته‌شده را تکمیل کنید.'); return; }
-  if (!/^09\\d{9}$/.test(phone)) { alert('شماره همراه را به‌صورت ۱۱ رقم و با ۰۹ وارد کنید.'); return; }
+  if (!/^09\d{9}$/.test(phone)) { alert('شماره همراه را به‌صورت ۱۱ رقم و با ۰۹ وارد کنید.'); return; }
   const button = form.querySelector('button[type="submit"]');
   const oldText = button.textContent;
   button.disabled = true;
