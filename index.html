@@ -433,21 +433,42 @@ input, textarea, select { font-size: 16px; }
 <footer>مجید خاتمی • شهرضا<br>تلفن: 09130321835<br>© کلیه حقوق این وب‌سایت محفوظ است.</footer>
 <div class="float"><a href="https://ble.ir/majidkhatamii" target="_blank" rel="noopener" aria-label="بله">ب</a></div>
 <script>
-document.getElementById('requestForm').addEventListener('submit',function(e){
+/* ثبت درخواست و آغاز پرداخت امن؛ تأیید نهایی فقط در سرور انجام می‌شود. */
+document.getElementById('requestForm').addEventListener('submit', async function(e) {
   e.preventDefault();
-  const selected=document.querySelector('input[name="consultType"]:checked');
-  const name=document.getElementById('name').value.trim();
-  const message=document.getElementById('message').value.trim();
-  const phone=document.getElementById('phone').value.trim();
-  if(!selected){alert('لطفاً نوع مشاوره را انتخاب کنید.');return;}
-  if(!name){alert('لطفاً نام و نام خانوادگی خود را وارد کنید.');return;}
-  if(!message){alert('لطفاً موضوع کلی درخواست مشاوره را بنویسید.');return;}
-  if(!phone){alert('لطفاً شماره تلفن همراه خود را وارد کنید.');return;}
-  const price=selected.dataset.price==='300000'?'۳۰۰٬۰۰۰ تومان':'۴۵۰٬۰۰۰ تومان';
-  const body=`درخواست مشاوره از وب‌سایت\nنوع مشاوره: ${selected.value}\nهزینه اعلام‌شده: ${price}\nنام و نام خانوادگی: ${name}\nموضوع کلی: ${message}\nشماره تلفن همراه: ${phone}\n\nلطفاً برای هماهنگی زمان مشاوره راهنمایی فرمایید.`;
-  alert('درگاه پرداخت هنوز متصل نشده است و فرم به‌صورت خودکار ارسال نمی‌شود. متن درخواست در پیام بعدی نمایش داده می‌شود تا آن را کپی کرده و در بله برای ما بفرستید.');
-  const copyText = prompt('لطفاً متن زیر را کپی کنید و پس از باز شدن بله برای ما بفرستید:', body);
-  if (copyText !== null) window.open('https://ble.ir/majidkhatamii','_blank','noopener');
+  const form = e.currentTarget;
+  const selected = document.querySelector('input[name="consultType"]:checked');
+  const name = document.getElementById('name').value.trim();
+  const subject = document.getElementById('message').value.trim();
+  const phone = document.getElementById('phone').value.trim().replace(/[\\s-]/g, '');
+  if (!selected) { alert('لطفاً نوع مشاوره را انتخاب کنید.'); return; }
+  if (!name || !subject || !phone) { alert('لطفاً همه اطلاعات خواسته‌شده را تکمیل کنید.'); return; }
+  if (!/^09\\d{9}$/.test(phone)) { alert('شماره همراه را به‌صورت ۱۱ رقم و با ۰۹ وارد کنید.'); return; }
+  const button = form.querySelector('button[type="submit"]');
+  const oldText = button.textContent;
+  button.disabled = true;
+  button.textContent = 'در حال اتصال به درگاه پرداخت...';
+  try {
+    const response = await fetch('https://majid-admin-panel.majidkhatamii.workers.dev/api/payment/create', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name,
+        phone,
+        subject,
+        consultation_type: selected.value
+      })
+    });
+    const result = await response.json();
+    if (!response.ok || !result.payment_url) {
+      throw new Error(result.error || 'اتصال به درگاه پرداخت انجام نشد. لطفاً کمی بعد دوباره تلاش کنید.');
+    }
+    window.location.href = result.payment_url;
+  } catch (error) {
+    alert(error.message || 'خطا در اتصال به درگاه پرداخت.');
+    button.disabled = false;
+    button.textContent = oldText;
+  }
 });
 
 /* منوی موبایل هنگام پایین رفتن جمع می‌شود؛ ردیف نام و دکمه ثابت می‌ماند. */
@@ -465,6 +486,5 @@ document.getElementById('requestForm').addEventListener('submit',function(e){
   window.addEventListener('scroll', updateHeader, { passive: true });
   updateHeader();
 })();
-
 </script>
 </body></html>
