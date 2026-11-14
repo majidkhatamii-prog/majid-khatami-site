@@ -339,6 +339,22 @@ input, textarea, select { font-size: 16px; }
   text-align-last: right;
   overflow-wrap: anywhere;
 }
+
+/* طراحی متعادل و خوانای کارت‌های تعرفه */
+#fees .section-head h2 { font-size: 1.85rem; }
+#fees .section-head p { color: var(--muted); }
+#fees .fee-cards { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; }
+#fees .fee-card { background:#fff; border:1px solid var(--line); border-top:4px solid var(--green2); border-radius:18px; padding:23px 20px; text-align:center; box-shadow:0 10px 28px #243b3010; }
+#fees .fee-card-inperson { border-top-color:var(--gold); }
+#fees .fee-icon { width:48px; height:48px; margin:0 auto 8px; display:grid; place-items:center; border-radius:50%; background:#edf4ef; color:var(--green2); font-size:1.45rem; }
+#fees .fee-card h3 { color:var(--green); margin:5px 0 4px; font-size:1.12rem; }
+#fees .fee-price { color:var(--green); font-size:1.65rem; font-weight:900; line-height:1.7; margin:6px 0 0; }
+#fees .fee-price span { font-size:.88rem; font-weight:600; }
+#fees .fee-detail { color:var(--muted); margin:0 0 14px; font-size:.9rem; }
+#fees .fee-btn { min-width:190px; margin-top:3px; }
+#fees .fee-footnote { text-align:center; color:var(--muted); font-size:.86rem; margin:17px 0 0; }
+@media(max-width:600px){ #fees .fee-cards { grid-template-columns:minmax(0,1fr); gap:12px; } #fees .fee-card { padding:20px 16px; } #fees .fee-price { font-size:1.5rem; } #fees .fee-btn { width:100%; } }
+
 </style>
 </head>
 <body>
@@ -377,19 +393,23 @@ input, textarea, select { font-size: 16px; }
       <h2>تعرفه خدمات و مشاوره حقوقی</h2>
       <p>هزینه خدمات مشاوره پیش از ثبت درخواست، به‌صورت شفاف</p>
     </div>
-    <div class="two" style="max-width:780px;margin:0 auto">
-      <div class="box" style="text-align:center;border-top:4px solid var(--green2)">
+    <div class="fee-cards" style="max-width:820px;margin:0 auto">
+      <article class="fee-card">
+        <div class="fee-icon" aria-hidden="true">☎</div>
         <h3>مشاوره تلفنی</h3>
-        <p style="font-size:1.35rem;font-weight:800;color:var(--green);margin:8px 0">۳۰۰٬۰۰۰ تومان</p>
-        <p>مدت مشاوره: ۱۵ دقیقه</p>
-      </div>
-      <div class="box" style="text-align:center;border-top:4px solid var(--gold)">
+        <p class="fee-price">۳۰۰٬۰۰۰ <span>تومان</span></p>
+        <p class="fee-detail">مدت مشاوره: ۱۵ دقیقه</p>
+        <a class="btn fee-btn" href="#contact">ثبت درخواست مشاوره</a>
+      </article>
+      <article class="fee-card fee-card-inperson">
+        <div class="fee-icon" aria-hidden="true">⚖</div>
         <h3>مشاوره حضوری</h3>
-        <p style="font-size:1.35rem;font-weight:800;color:var(--green);margin:8px 0">۴۵۰٬۰۰۰ تومان</p>
-        <p>هزینه هر جلسه مشاوره حضوری</p>
-      </div>
+        <p class="fee-price">۴۵۰٬۰۰۰ <span>تومان</span></p>
+        <p class="fee-detail">هزینه هر جلسه مشاوره حضوری</p>
+        <a class="btn fee-btn" href="#contact">ثبت درخواست مشاوره</a>
+      </article>
     </div>
-    <p style="text-align:center;color:var(--muted);font-size:.86rem;margin:16px 0 0">برای ثبت درخواست و پرداخت هزینه مشاوره، از بخش «درخواست مشاوره» استفاده کنید.</p>
+    <p class="fee-footnote">هزینه هر خدمت پیش از ثبت درخواست مشخص است. برای انتخاب نوع مشاوره و پرداخت، از بخش «درخواست مشاوره» استفاده کنید.</p>
   </div>
 </section>
 <section id="services"><div class="container">
@@ -447,7 +467,7 @@ input, textarea, select { font-size: 16px; }
       <p>📍 <b>نشانی:</b> شهرضا، چهارراه مدرس، مجتمع مهر</p>
       <p>☎️ <b>تلفن:</b> <span dir="ltr">09130321835</span></p>
       <p>🕒 <b>ساعات اعلام‌شده:</b> شنبه تا چهارشنبه، ۱۶ تا ۲۰</p>
-      <a class="btn" href="https://ble.ir/majidkhatamii" target="_blank" rel="noopener" class="btn bale-green" style="width:100%;margin-top:10px">شروع گفت‌وگو در بله</a>
+      <a class="btn bale-green" href="https://ble.ir/majidkhatamii" target="_blank" rel="noopener" style="width:100%;margin-top:10px">شروع گفت‌وگو در بله</a>
       <div class="disclaimer">در پیام‌های نخستین، فقط موضوع کلی درخواست خود را مطرح کنید. در ادامه، اگر برای بررسی بهتر موضوع به توضیحات یا مدارکی نیاز باشد، راهنمایی‌تان می‌کنیم. ارائه نظر حقوقی پس از بررسی مدارک و جزئیات موضوع امکان‌پذیر است.</div>
       <div style="text-align:center;margin-top:16px">
         <a referrerpolicy='origin' target='_blank' href='https://trustseal.enamad.ir/?id=8677104&Code=Kz9S8cyzeW3F4j1HIJl6PYrhah5Z0aho'><img referrerpolicy='origin' src='https://trustseal.enamad.ir/logo.aspx?id=8677104&Code=Kz9S8cyzeW3F4j1HIJl6PYrhah5Z0aho' alt='' style='cursor:pointer' code='Kz9S8cyzeW3F4j1HIJl6PYrhah5Z0aho'></a>
