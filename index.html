@@ -18,6 +18,7 @@ header{position:sticky;top:0;z-index:10;background:#ffffffed;backdrop-filter:blu
 nav{display:flex;gap:20px;align-items:center;font-size:.9rem;font-weight:600}nav a:hover{color:var(--green2)}
 .btn{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:12px;padding:11px 20px;background:var(--green);color:white;font:inherit;font-weight:700;cursor:pointer;transition:.2s}
 .btn:hover{background:var(--green2);transform:translateY(-1px)}.btn.gold{background:var(--gold);color:#1d2c25}.btn.light{background:white;color:var(--green);border:1px solid var(--line)}
+.btn.bale-green{background:#198754;color:#fff}.btn.bale-green:hover{background:#146c43}
 .hero{padding:76px 0 58px;background:radial-gradient(circle at 12% 15%,#e9dfc7 0,transparent 27%),linear-gradient(135deg,#f7f5ef,#eeeee5)}
 .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center}
 .kicker{display:inline-block;border:1px solid #d8c28d;color:#80672e;background:#fffaf0;padding:4px 14px;border-radius:30px;font-size:.82rem;font-weight:700}
@@ -344,7 +345,7 @@ input, textarea, select { font-size: 16px; }
 <div class="top">پذیرش درخواست مشاوره حقوقی و گفت‌وگوی آنلاین</div>
 <header><div class="container nav">
   <a class="brand" href="#"><strong>مجید خاتمی</strong><small>خدمات و مشاوره حقوقی</small></a>
-  <nav aria-label="منوی اصلی"><a href="#services">حوزه‌های فعالیت</a><a href="#about">درباره ما</a><a href="#faq">سؤالات متداول</a><a href="#contact-info">تماس</a></nav>
+  <nav aria-label="منوی اصلی"><a href="#services">حوزه‌های فعالیت</a><a href="articles.html">مقالات</a><a href="#about">درباره ما</a><a href="#faq">سؤالات متداول</a><a href="#contact-info">تماس</a></nav>
   <a class="btn" href="#contact">درخواست مشاوره</a>
 </div></header>
 <main>
@@ -358,7 +359,7 @@ input, textarea, select { font-size: 16px; }
       <div class="lead-block"><span class="lead-mark" aria-hidden="true">✓</span><p class="lead">بررسی دقیق هر موضوع و تشریح مسیرهای قانونی قابل پیگیری به زبانی روشن و قابل‌فهم، با هدف کمک به تصمیم‌گیری آگاهانه و انتخاب راهکار مناسب برای حفظ حقوق شما.</p></div>
       <div class="lead-block"><span class="lead-mark" aria-hidden="true">✓</span><p class="lead">بسیاری از اختلافات حقوقی با آگاهی و اقدام به‌موقع قابل پیشگیری هستند. با دریافت راهنمایی حقوقی مناسب، می‌توانید پیش از بروز مشکلات جدی، تصمیم‌های سنجیده‌تر و مطمئن‌تری بگیرید.</p></div>
     </div>
-    <div class="actions"><a class="btn" href="#contact">ثبت درخواست مشاوره</a><a class="btn light" href="tel:09130321835">تماس: 09130321835</a><a class="btn gold" href="https://ble.ir/majidkhatamii" target="_blank" rel="noopener">گفت‌وگو در بله</a></div>
+    <div class="actions"><a class="btn" href="#contact">ثبت درخواست مشاوره</a><a class="btn light" href="tel:09130321835">تماس: 09130321835</a><a class="btn bale-green" href="https://ble.ir/majidkhatamii" target="_blank" rel="noopener">گفت‌وگو در بله</a></div>
   </div>
   <aside class="profile">
     <h2>اطلاعات دفتر و خدمات</h2>
@@ -417,6 +418,7 @@ input, textarea, select { font-size: 16px; }
         <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required placeholder="مثلاً 09123456789">
         <p class="privacy">با زدن دکمه، به درگاه پرداخت امن بانکی هدایت می‌شوید. پس از تأیید پرداخت، درخواست شما برای هماهنگی ارسال می‌شود.</p>
         <button class="btn" type="submit" style="width:100%">ثبت درخواست مشاوره</button>
+        <a class="btn light" href="https://ble.ir/majidkhatamibot" target="_blank" rel="noopener" style="width:100%;margin-top:10px">درخواست مشاوره از طریق ربات بله</a>
       </form>
     </div>
     <div class="box contact-info" id="contact-info">
