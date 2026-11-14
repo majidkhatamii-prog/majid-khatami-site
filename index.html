@@ -18,7 +18,7 @@ header{position:sticky;top:0;z-index:10;background:#ffffffed;backdrop-filter:blu
 nav{display:flex;gap:20px;align-items:center;font-size:.9rem;font-weight:600}nav a:hover{color:var(--green2)}
 .btn{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:12px;padding:11px 20px;background:var(--green);color:white;font:inherit;font-weight:700;cursor:pointer;transition:.2s}
 .btn:hover{background:var(--green2);transform:translateY(-1px)}.btn.gold{background:var(--gold);color:#1d2c25}.btn.light{background:white;color:var(--green);border:1px solid var(--line)}
-.btn.bale-green{background:#198754;color:#fff}.btn.bale-green:hover{background:#146c43}
+.btn.bale-green{background:#1e9d59;color:#fff}.btn.bale-green:hover{background:#16874d}
 .hero{padding:76px 0 58px;background:radial-gradient(circle at 12% 15%,#e9dfc7 0,transparent 27%),linear-gradient(135deg,#f7f5ef,#eeeee5)}
 .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center}
 .kicker{display:inline-block;border:1px solid #d8c28d;color:#80672e;background:#fffaf0;padding:4px 14px;border-radius:30px;font-size:.82rem;font-weight:700}
@@ -54,7 +54,7 @@ textarea{min-height:115px;resize:vertical}
 .contact-info p{margin:8px 0;padding:10px 12px;background:#f8f6f0;border-radius:10px;font-size:.9rem}
 footer{background:#102f29;color:#dce7e1;text-align:center;padding:28px 12px;font-size:.85rem}
 .float{position:fixed;left:16px;bottom:16px;z-index:9}
-.float a{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;background:#1e9d59;color:white;font-size:1.4rem;box-shadow:0 8px 22px #0003}
+.float a{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;background:#1e9d59;box-shadow:0 8px 22px #0003;overflow:hidden}.float a img{display:block;width:100%;height:100%;object-fit:cover}
 .disclaimer{background:#fff9e9;border:1px solid #ead9a8;border-radius:12px;padding:12px 15px;color:#66552c;font-size:.82rem;margin-top:18px}
 @media(max-width:850px){.hero-grid,.two,.contact-grid{grid-template-columns:1fr}.cards{grid-template-columns:repeat(2,1fr)}nav{gap:10px;flex-wrap:wrap;justify-content:center}.nav{padding:10px 0;flex-wrap:wrap}.brand{margin-left:auto}}
 @media(max-width:520px){.hero{padding:48px 0 36px}section{padding:42px 0}.cards{grid-template-columns:1fr}.actions .btn{width:100%}.row{font-size:.82rem}}
@@ -418,7 +418,7 @@ input, textarea, select { font-size: 16px; }
         <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required placeholder="مثلاً 09123456789">
         <p class="privacy">با زدن دکمه، به درگاه پرداخت امن بانکی هدایت می‌شوید. پس از تأیید پرداخت، درخواست شما برای هماهنگی ارسال می‌شود.</p>
         <button class="btn" type="submit" style="width:100%">ثبت درخواست مشاوره</button>
-        <a class="btn light" href="https://ble.ir/majidkhatamibot" target="_blank" rel="noopener" style="width:100%;margin-top:10px">درخواست مشاوره از طریق ربات بله</a>
+        <a class="btn light" href="https://ble.ir/majidkhatamibot" target="_blank" rel="noopener" class="btn gold" style="width:100%;margin-top:10px">درخواست مشاوره از طریق ربات بله</a>
       </form>
     </div>
     <div class="box contact-info" id="contact-info">
@@ -426,7 +426,7 @@ input, textarea, select { font-size: 16px; }
       <p>📍 <b>نشانی:</b> شهرضا، چهارراه مدرس، مجتمع مهر</p>
       <p>☎️ <b>تلفن:</b> <span dir="ltr">09130321835</span></p>
       <p>🕒 <b>ساعات اعلام‌شده:</b> شنبه تا چهارشنبه، ۱۶ تا ۲۰</p>
-      <a class="btn" href="https://ble.ir/majidkhatamii" target="_blank" rel="noopener" style="width:100%;margin-top:10px">شروع گفت‌وگو در بله</a>
+      <a class="btn" href="https://ble.ir/majidkhatamii" target="_blank" rel="noopener" class="btn bale-green" style="width:100%;margin-top:10px">شروع گفت‌وگو در بله</a>
       <div class="disclaimer">در پیام‌های نخستین، فقط موضوع کلی درخواست خود را مطرح کنید. در ادامه، اگر برای بررسی بهتر موضوع به توضیحات یا مدارکی نیاز باشد، راهنمایی‌تان می‌کنیم. ارائه نظر حقوقی پس از بررسی مدارک و جزئیات موضوع امکان‌پذیر است.</div>
       <div style="text-align:center;margin-top:16px">
         <a referrerpolicy='origin' target='_blank' href='https://trustseal.enamad.ir/?id=8677104&Code=Kz9S8cyzeW3F4j1HIJl6PYrhah5Z0aho'><img referrerpolicy='origin' src='https://trustseal.enamad.ir/logo.aspx?id=8677104&Code=Kz9S8cyzeW3F4j1HIJl6PYrhah5Z0aho' alt='' style='cursor:pointer' code='Kz9S8cyzeW3F4j1HIJl6PYrhah5Z0aho'></a>
@@ -436,7 +436,7 @@ input, textarea, select { font-size: 16px; }
 </div></section>
 </main>
 <footer>مجید خاتمی • شهرضا<br>تلفن: 09130321835<br>© کلیه حقوق این وب‌سایت محفوظ است.</footer>
-<div class="float"><a href="https://ble.ir/majidkhatamii" target="_blank" rel="noopener" aria-label="بله">ب</a></div>
+<div class="float"><a href="https://ble.ir/majidkhatamii" target="_blank" rel="noopener" aria-label="گفت‌وگو در بله"><img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Bale_logo.png" alt="لوگوی بله"></a></div>
 <script>
 /* ثبت درخواست و آغاز پرداخت امن؛ تأیید نهایی فقط در سرور انجام می‌شود. */
 document.getElementById('requestForm').addEventListener('submit', async function(e) {
