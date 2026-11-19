@@ -99,7 +99,9 @@ textarea{min-height:115px;resize:vertical}
 .privacy{font-size:.78rem;color:var(--muted);margin:8px 0 14px}
  .contact-form-column{display:flex;flex-direction:column;gap:18px;min-width:0}
 .bale-request-box{border-color:#dce8df;background:#fbfdfb}
-.bale-request-box h3{margin:0 0 8px;color:var(--green);font-size:1.08rem}
+.bale-heading{display:flex;align-items:center;gap:14px;margin-bottom:10px;min-height:88px}
+.bale-heading img{width:88px;height:88px;object-fit:contain;flex:0 0 88px;filter:drop-shadow(0 5px 7px #123c3520)}
+.bale-request-box h3{margin:0;color:var(--green);font-size:1.08rem;line-height:1.8}
 .bale-request-box .bale-instructions{margin:0;color:#53635d;font-size:.88rem;line-height:2;text-align:justify;text-align-last:right}
 .contact-info p{margin:8px 0;padding:10px 12px;background:#f8f6f0;border-radius:10px;font-size:.9rem}
 footer{background:#102f29;color:#dce7e1;text-align:center;padding:28px 12px;font-size:.85rem}
@@ -107,7 +109,7 @@ footer{background:#102f29;color:#dce7e1;text-align:center;padding:28px 12px;font
 .float a{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;background:#1e9d59;box-shadow:0 8px 22px #0003;overflow:hidden}.float a img{display:block;width:100%;height:100%;object-fit:cover}
 .disclaimer{background:#fff9e9;border:1px solid #ead9a8;border-radius:12px;padding:12px 15px;color:#66552c;font-size:.82rem;margin-top:18px}
 @media(max-width:850px){.hero-grid,.two,.contact-grid{grid-template-columns:1fr}.cards{grid-template-columns:repeat(2,1fr)}nav{gap:10px;flex-wrap:wrap;justify-content:center}.nav{padding:10px 0;flex-wrap:wrap}.brand{margin-left:auto}}
-@media(max-width:520px){.hero{padding:48px 0 36px}section{padding:42px 0}.cards{grid-template-columns:1fr}.actions .btn{width:100%}.row{font-size:.82rem}}
+@media(max-width:520px){.bale-heading{gap:10px;min-height:72px}.bale-heading img{width:72px;height:72px;flex-basis:72px}.bale-heading h3{font-size:1rem}.hero{padding:48px 0 36px}section{padding:42px 0}.cards{grid-template-columns:1fr}.actions .btn{width:100%}.row{font-size:.82rem}}
 
 
 /* بهینه‌سازی نمایش در تلفن همراه */
@@ -517,7 +519,7 @@ input, textarea, select { font-size: 16px; }
         </form>
       </div>
       <div class="box bale-request-box">
-        <h3><span aria-hidden="true">🤖</span> سامانه ثبت درخواست مشاوره از طریق بله</h3>
+        <div class="bale-heading"><img src="robot-assistant.webp" alt="ربات دستیار سامانه مشاوره بله" width="88" height="88"><h3>سامانه ثبت درخواست مشاوره از طریق بله</h3></div>
         <p class="bale-instructions">برای ثبت درخواست مشاوره، ابتدا اپلیکیشن پیام‌رسان بله را روی تلفن همراه خود نصب کنید. پس از نصب، از طریق دکمه زیر وارد ربات دفتر حقوقی شوید، اطلاعات اولیه خود را ثبت و هزینه مربوطه را پرداخت کنید تا درخواست شما ثبت شود. پس از ثبت درخواست، برای هماهنگی و تعیین زمان مشاوره با شما تماس خواهیم گرفت.</p>
         <a class="btn" href="https://ble.ir/majidkhatamibot" target="_blank" rel="noopener" style="width:100%;margin-top:14px">ثبت درخواست مشاوره از طریق ربات بله</a>
       </div>
