@@ -27,20 +27,44 @@ main{min-height:65vh;padding:64px 0}.panel{background:#fff;border:1px solid var(
 h1{color:var(--green);margin:0 0 10px;font-size:2rem}.muted{color:var(--muted);margin:0}
 footer{background:#102f29;color:#dce7e1;text-align:center;padding:24px 12px;font-size:.85rem}
 @media(max-width:600px){main{padding:38px 0}.panel{padding:22px}h1{font-size:1.6rem}.nav{min-height:62px}}
+
+/* بهینه‌سازی خوانایی فارسی و نمایش راست‌چین در رایانه و تلفن همراه */
+html{direction:rtl;text-size-adjust:100%;-webkit-text-size-adjust:100%}
+body{direction:rtl;text-align:right;overflow-x:hidden}
+.container{min-width:0}
+.panel{direction:rtl;text-align:right}
+.article-list{display:grid;grid-template-columns:1fr;gap:16px;margin-top:26px}
+.article-card{min-width:0;padding:22px;border:1px solid var(--line);border-radius:14px;background:#fbfcfa}
+.article-card h2{margin:0 0 8px;font-size:1.18rem;line-height:1.9}
+.article-card p{line-height:2;text-align:justify;text-align-last:right;margin:0;color:var(--muted)}
+.article-card a{overflow-wrap:anywhere}
+@media(max-width:600px){
+ main{padding:28px 0}
+ .container{width:calc(100% - 26px)}
+ .panel{padding:18px;border-radius:15px}
+ h1{font-size:1.5rem;line-height:1.8}
+ .article-card{padding:16px}
+ .article-card h2{font-size:1.05rem;line-height:1.9}
+ .article-card p{font-size:.92rem;line-height:2.1}
+ .nav{flex-wrap:wrap;min-height:60px;padding:10px 0}
+}
+
 </style>
 </head>
 <body>
 <header><div class="container nav"><a class="brand" href="index.html">مجید خاتمی</a><a class="back" href="index.html">بازگشت به صفحه اصلی</a></div></header>
 <main><div class="container"><section class="panel"><h1>مقالات</h1><p class="muted">مطالب و مقالات حقوقی با هدف آشنایی بیشتر با موضوعات کاربردی حقوقی در این بخش منتشر می‌شوند.</p>
-<div style="margin-top:26px;padding:20px;border:1px solid var(--line);border-radius:14px;background:#fbfcfa">
-<h2 style="margin:0 0 8px;font-size:1.2rem;line-height:1.9"><a href="elzam-be-tanzim-sanad-rasmi.html" style="color:var(--green);text-decoration:none">دعوی الزام به تنظیم سند رسمی</a></h2>
-<p class="muted">شرایط طرح دعوی، مدارک لازم، دادگاه صالح، مراحل رسیدگی و نکات حقوقی انتقال رسمی ملک.</p>
+<div class="article-list">
+<article class="article-card">
+<h2><a href="elzam-be-tanzim-sanad-rasmi.html" style="color:var(--green);text-decoration:none">دعوی الزام به تنظیم سند رسمی</a></h2>
+<p>شرایط طرح دعوی، مدارک لازم، دادگاه صالح، مراحل رسیدگی و نکات حقوقی انتقال رسمی ملک.</p>
 <a href="elzam-be-tanzim-sanad-rasmi.html" style="display:inline-block;margin-top:12px;color:var(--green2);font-weight:700;text-decoration:none">مطالعه مقاله ←</a>
-<div style="margin-top:16px;padding:20px;border:1px solid var(--line);border-radius:14px;background:#fbfcfa">
-<h2 style="margin:0 0 8px;font-size:1.2rem;line-height:1.9"><a href="hefari-gheyremojaz-asar-tarikhi.html" style="color:var(--green);text-decoration:none">بررسی حقوقی جرم حفاری غیرمجاز به قصد کشف اشیای تاریخی و فرهنگی</a></h2>
-<p class="muted">تحلیل ماده ۵۶۲ قانون مجازات اسلامی، ارکان جرم، سوءنیت، ادله اثبات و مجازات حفاری غیرمجاز.</p>
+</article>
+<article class="article-card">
+<h2><a href="hefari-gheyremojaz-asar-tarikhi.html" style="color:var(--green);text-decoration:none">بررسی حقوقی جرم حفاری غیرمجاز به قصد کشف اشیای تاریخی و فرهنگی</a></h2>
+<p>تحلیل ماده ۵۶۲ قانون مجازات اسلامی، ارکان جرم، سوءنیت، ادله اثبات و مجازات حفاری غیرمجاز.</p>
 <a href="hefari-gheyremojaz-asar-tarikhi.html" style="display:inline-block;margin-top:12px;color:var(--green2);font-weight:700;text-decoration:none">مطالعه مقاله ←</a>
-</div>
+</article>
 </div></section></div></main>
 <footer>مجید خاتمی • شهرضا</footer>
 </body>
